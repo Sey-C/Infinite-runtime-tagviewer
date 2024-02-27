@@ -766,7 +766,7 @@ namespace InfiniteRuntimeTagViewer.Interface.Controls
 					case "Float":
 						TagValueBlock? vb2 = new() { HorizontalAlignment = HorizontalAlignment.Left };
 						vb2.value_type.Text = "Float";
-						vb2.value.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString();
+						vb2.value.Text = _m.ReadFloat((address + entry.Key).ToString("X")).ToString("0.0000");
 						parentpanel.Children.Add(vb2);
 
 						vb2.value.Tag = new TagEditorDefinition()
